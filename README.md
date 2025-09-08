@@ -2,7 +2,7 @@
 
 ## Screenshot 📸
 
-![App Screenshot](placeholder-screenshot-url)
+![App Screenshot](https://i.imgur.com/0XN9DLW.png)
 
 ## Project Overview 🌟
 
