@@ -1,6 +1,7 @@
 import { FaBell, FaEnvelope, FaGear } from "react-icons/fa6";
 import AvatarIcon from "../images/man.png";
 import MyAvatar from "./MyAvatar";
+import avocadoLogo from "../images/avocado.svg";
 import Logo from "./Logo";
 import SearchBar from "./SearchBar";
 
@@ -9,7 +10,7 @@ const Header = () => {
     <header style={styles.header}>
       <div style={styles.leftSide}>
         <a href="#">
-          <Logo logoAlt="Avacado.com Logo" />
+          <Logo img={avocadoLogo} alt="Avacado.com Logo" />
         </a>
 
         <a href="#" style={styles.brandLink}>

@@ -1,11 +1,5 @@
 const Logo = (props) => {
-  return (
-    <img
-      src="/src/images/avocado.svg"
-      alt={props.logoAlt}
-      style={styles.logo}
-    />
-  );
+  return <img src={props.img} alt={props.alt} style={styles.logo} />;
 };
 
 export default Logo;
