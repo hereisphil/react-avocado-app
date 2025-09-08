@@ -1,0 +1,81 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* COOLORS COLOR PALETTE */
+  /* https://coolors.co/palette/606c38-283618-fefae0-dda15e-bc6c25 */
+  --olive-green: #606c38;
+  --dark-green: #283618;
+  --cream: #fefae0;
+  --soft-orange: #dda15e;
+  --orange: #bc6c25;
+}
+/* Minimal Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol {
+  list-style: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100vh;
+  color: var(--soft-orange);
+  background-color: #fefae0;
+}
+
+a {
+  color: var(--olive-green);
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover {
+  color: var(--dark-green);
+  text-decoration: underline;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-family: sans-serif;
+  font-size: 1rem;
+}
+
+input[type="search"]::placeholder {
+  color: var(--cream);
+}
+
+/* Flashing Hover Effect taken from
+https://codepen.io/nxworld/pen/ZYNOBZ */
+img:hover {
+  opacity: 1;
+  -webkit-animation: flash 1.5s;
+  animation: flash 1.5s;
+}
+@-webkit-keyframes flash {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes flash {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
