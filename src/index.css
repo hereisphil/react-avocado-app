@@ -36,12 +36,12 @@ body {
   background-color: #fefae0;
 }
 
-a {
+li {
   color: var(--olive-green);
   text-decoration: none;
   cursor: pointer;
 }
-a:hover {
+li:hover {
   color: var(--dark-green);
   text-decoration: underline;
 }

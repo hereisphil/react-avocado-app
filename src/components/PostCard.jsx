@@ -1,23 +1,35 @@
-import AvatarIcon from "../images/man.png";
 import MyAvatar from "./MyAvatar";
 import { FaPen, FaTrashCan } from "react-icons/fa6";
+import anonymousUser from "../images/user.png";
+import TodaysDate from "./TodaysDate";
 
 const PostCard = (props) => {
   return (
-    <div style={styles.card}>
+    <article style={styles.card}>
       <div style={styles.cardHeader}>
-        <MyAvatar img={AvatarIcon} alt="user icon" />
+        <MyAvatar
+          img={props.val.pAvatar ? props.val.pAvatar : anonymousUser}
+          alt={
+            props.val.pAlt
+              ? props.val.pAlt
+              : "generic anonymous user profile image"
+          }
+        />
         <p style={styles.userName}>
-          <em>{props.userName}</em>
+          <em>
+            {props.val.pAuthor ? props.val.pAuthor : "Anonymous"}
+            <br />
+            {props.val.pDate ? props.val.pDate : <TodaysDate />}
+          </em>
         </p>
         <FaPen style={styles.icon} />
-        <FaTrashCan style={styles.icon} />
+        <FaTrashCan style={styles.icon} onClick={props.delete} />
       </div>
       <div style={styles.cardContent}>
-        <h3 style={styles.title}>{props.title}</h3>
-        <p style={styles.caption}>{props.caption}</p>
+        <h3 style={styles.title}>{props.val.pTitle}</h3>
+        <p style={styles.caption}>{props.val.pContent}</p>
       </div>
-    </div>
+    </article>
   );
 };
 

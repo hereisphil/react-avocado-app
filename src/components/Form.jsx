@@ -1,20 +1,34 @@
 import Button from "./Button";
 import AvatarIcon from "../images/man.png";
 import MyAvatar from "./MyAvatar";
+import TodaysDate from "./TodaysDate";
 
 const Form = (props) => {
   return (
-    <form style={styles.formStyles}>
+    <form style={styles.formStyles} onSubmit={props.addPost}>
       <div style={styles.postInputs}>
-        <input type="text" placeholder="Post Title" style={styles.titleInput} />
+        <input
+          type="text"
+          placeholder="Post Title"
+          style={styles.titleInput}
+          name="pTitle"
+          value={props.pTitle}
+          onChange={props.getInput}
+        />
         <textarea
           type="text"
           placeholder={`What's on your mind, ${props.userName}?`}
           style={styles.postInput}
+          name="pContent"
+          value={props.pContent}
+          onChange={props.getValue}
         />
       </div>
       <div style={styles.userActions}>
         <MyAvatar img={AvatarIcon} alt="user photo" />
+        <span style={styles.softOrange}>
+          <TodaysDate />
+        </span>
         <Button btnText="Post" />
       </div>
     </form>
@@ -68,5 +82,8 @@ const styles = {
     alignItems: "center",
     paddingRight: "2rem",
     paddingLeft: "1rem",
+  },
+  softOrange: {
+    color: "var(--soft-orange)",
   },
 };

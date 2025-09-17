@@ -1,10 +1,10 @@
 const AdCard = (props) => {
   return (
-    <div style={styles.card}>
+    <article style={styles.card}>
       <h3>{props.title}</h3>
       <img src={props.img} alt={props.alt} style={styles.img} />
       <p>{props.subtitle}</p>
-    </div>
+    </article>
   );
 };
 

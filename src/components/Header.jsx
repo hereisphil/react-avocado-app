@@ -9,28 +9,15 @@ const Header = () => {
   return (
     <header style={styles.header}>
       <div style={styles.leftSide}>
-        <a href="#">
-          <Logo img={avocadoLogo} alt="Avacado.com Logo" />
-        </a>
-
-        <a href="#" style={styles.brandLink}>
-          <h1 style={styles.brandName}>AVOCADO</h1>
-        </a>
+        <Logo img={avocadoLogo} alt="Avacado.com Logo" />
+        <h1 style={styles.brandName}>AVOCADO</h1>
       </div>
       <SearchBar />
       <div style={styles.rightSide}>
-        <a href="#" style={styles.icons}>
-          <FaEnvelope />
-        </a>
-        <a href="#" style={styles.icons}>
-          <FaBell />
-        </a>
-        <a href="#" style={styles.icons}>
-          <FaGear />
-        </a>
-        <a href="#">
-          <MyAvatar img={AvatarIcon} alt="Generic male silhouette icon" />
-        </a>
+        <FaEnvelope style={styles.icons} />
+        <FaBell style={styles.icons} />
+        <FaGear style={styles.icons} />
+        <MyAvatar img={AvatarIcon} alt="Generic male silhouette icon" />
       </div>
     </header>
   );
@@ -45,18 +32,17 @@ const styles = {
     alignItems: "center",
     paddingLeft: "10px",
     paddingRight: "10px",
-    marginTop: "0.5rem",
+    margin: "0.5rem 0",
   },
   leftSide: {
     display: "flex",
     alignItems: "center",
     gap: "0.5rem",
   },
-  brandLink: {
-    color: "var(--orange)",
-  },
   brandName: {
     fontSize: "1.5rem",
+    color: "var(--orange)",
+    cursor: "pointer",
   },
   rightSide: {
     display: "flex",
@@ -65,5 +51,6 @@ const styles = {
   },
   icons: {
     fontSize: "1.5rem",
+    cursor: "pointer",
   },
 };

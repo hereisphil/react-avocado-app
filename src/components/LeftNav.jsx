@@ -2,15 +2,9 @@ const LeftNav = () => {
   return (
     <nav style={styles.leftNav}>
       <ul style={styles.navItems}>
-        <li>
-          <a>News Feed</a>
-        </li>
-        <li>
-          <a>Messages</a>
-        </li>
-        <li>
-          <a>Watch</a>
-        </li>
+        <li>News Feed</li>
+        <li>Messages</li>
+        <li>Watch</li>
       </ul>
     </nav>
   );
@@ -30,5 +24,6 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     gap: "1rem",
+    cursor: "pointer",
   },
 };
