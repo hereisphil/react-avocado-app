@@ -2,23 +2,27 @@
 
 ## Screenshot 📸
 
-![App Screenshot](https://i.imgur.com/0XN9DLW.png)
+![App Screenshot](https://i.imgur.com/zdbJ7yK.png)
 
 ## Project Overview 🌟
 
 Welcome to my first React app project, created as part of the Web Development program at Full Sail University! This app, dubbed "Avocado," (just a random name) is a social media-style interface featuring a news feed, messages, watch section, and ad cards.
+
+> **September 17, 2025 Update - WEEK 2**: Exciting progress! Added state management with user object array, mapped posts with `<PostCard />`, and implemented add/delete functionality. Enhanced components with unique IDs, double validation for posts, and a `TodaysDate` component. Fixed styling, updated to `<article>` tags, and improved background color via `componentDidMount`. Still refining form inputs and delete edge cases!
 
 > **September 8, 2025 Update**: This is its FIRST iteration. It's non-functional, but will be developed throughout my current 4-week course at Full Sail.
 
 ## Features 🚀
 
 - Class-based `App.jsx` component.
-- Functional components: `Button`, `Form`, `Header`, `LeftNav`, `Logo`, `MyAvatar`, `AdCard`, `PostCard`, `SearchBar`.
+- Components: `Button`, `Form`, `Header`, `LeftNav`, `Logo`, `MyAvatar`, `AdCard`, `PostCard`, `SearchBar`, `TodaysDate`.
 - Props usage for dynamic content.
 - CSS-in-JS for styling.
 - Custom icons via `react-icons`.
 - Styled `Button` component using `styled-components`.
 - Custom images for logo, favicon, and ads.
+- State management for posts with add/delete functionality.
+- Unique IDs for React key optimization.
 
 ## Restrictions 🚫
 
@@ -46,6 +50,7 @@ Per the course requirements, this 1st iteration **cannot use function-based comp
 - Added `styled-components` with `npm install styled-components` for the `Button` component.
 - Avoided `useState` as per requirements.
 - Used custom-sourced images for ads, logo, and favicon.
+- Week 2 updates include state, `componentDidMount`, and post management logic.
 
 ## Acknowledgments 🙏
 
@@ -59,4 +64,3 @@ You can find me here:
 
 - **GitHub:** [hereisphil](https://github.com/hereisphil)
 - **LinkedIn:** [PhillipCantu](https://www.linkedin.com/in/phillipcantu/)
-- **Instagram:** [@philtheotaku](https://www.instagram.com/philtheotaku/)
