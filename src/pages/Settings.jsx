@@ -50,7 +50,7 @@ function Settings() {
         {/* Profile header card */}
         <section style={styles.headerCard}>
           <img
-            src={user?.picture?.large || "https://via.placeholder.com/150"}
+            src={user?.picture?.large || "https://placehold.co/150x150"}
             alt={`${user?.name?.title || ""}. ${user?.name?.first || ""} ${
               user?.name?.last || ""
             }'s profile photo`}
