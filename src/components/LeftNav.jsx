@@ -1,10 +1,29 @@
+import { NavLink } from "react-router";
+
 const LeftNav = () => {
   return (
     <nav style={styles.leftNav}>
       <ul style={styles.navItems}>
-        <li>News Feed</li>
-        <li>Messages</li>
-        <li>Watch</li>
+        <li>
+          <NavLink to="/newsfeed" style={styles.links}>
+            Newsfeed
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/dashboard" style={styles.links}>
+            Dashboard
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/messages" style={styles.links}>
+            Messages
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/watch" style={styles.links}>
+            Watch
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );
@@ -24,6 +43,5 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     gap: "1rem",
-    cursor: "pointer",
   },
 };

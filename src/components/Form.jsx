@@ -13,7 +13,6 @@ const Form = (props) => {
           style={styles.titleInput}
           name="pTitle"
           value={props.pTitle}
-          onChange={props.getInput}
         />
         <textarea
           type="text"
@@ -21,7 +20,6 @@ const Form = (props) => {
           style={styles.postInput}
           name="pContent"
           value={props.pContent}
-          onChange={props.getValue}
         />
       </div>
       <div style={styles.userActions}>
