@@ -36,16 +36,6 @@ body {
   background-color: #fefae0;
 }
 
-li {
-  color: var(--olive-green);
-  text-decoration: none;
-  cursor: pointer;
-}
-li:hover {
-  color: var(--dark-green);
-  text-decoration: underline;
-}
-
 input::placeholder,
 textarea::placeholder {
   font-family: sans-serif;
@@ -54,6 +44,16 @@ textarea::placeholder {
 
 input[type="search"]::placeholder {
   color: var(--cream);
+}
+
+a {
+  color: var(--dark-green);
+  text-decoration: none;
+}
+
+a.active {
+  color: var(--orange);
+  text-decoration: underline;
 }
 
 /* Flashing Hover Effect taken from

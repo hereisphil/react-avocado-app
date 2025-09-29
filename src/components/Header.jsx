@@ -1,3 +1,4 @@
+import { NavLink } from "react-router";
 import { FaBell, FaEnvelope, FaGear } from "react-icons/fa6";
 import AvatarIcon from "../images/man.png";
 import MyAvatar from "./MyAvatar";
@@ -8,16 +9,26 @@ import SearchBar from "./SearchBar";
 const Header = () => {
   return (
     <header style={styles.header}>
-      <div style={styles.leftSide}>
-        <Logo img={avocadoLogo} alt="Avacado.com Logo" />
-        <h1 style={styles.brandName}>AVOCADO</h1>
+      <div>
+        <NavLink to="/" style={styles.leftSide}>
+          <Logo img={avocadoLogo} alt="Avacado.com Logo" />
+          <h1 style={styles.brandName}>AVOCADO</h1>
+        </NavLink>
       </div>
       <SearchBar />
       <div style={styles.rightSide}>
-        <FaEnvelope style={styles.icons} />
-        <FaBell style={styles.icons} />
-        <FaGear style={styles.icons} />
-        <MyAvatar img={AvatarIcon} alt="Generic male silhouette icon" />
+        <NavLink to="/messages">
+          <FaEnvelope style={styles.icons} />
+        </NavLink>
+        <NavLink to="/notifications">
+          <FaBell style={styles.icons} />
+        </NavLink>
+        <NavLink to="/settings">
+          <FaGear style={styles.icons} />
+        </NavLink>
+        <NavLink to="/settings">
+          <MyAvatar img={AvatarIcon} alt="Generic male silhouette icon" />
+        </NavLink>
       </div>
     </header>
   );
@@ -38,11 +49,11 @@ const styles = {
     display: "flex",
     alignItems: "center",
     gap: "0.5rem",
+    textDecoration: "none",
   },
   brandName: {
     fontSize: "1.5rem",
     color: "var(--orange)",
-    cursor: "pointer",
   },
   rightSide: {
     display: "flex",
@@ -51,6 +62,5 @@ const styles = {
   },
   icons: {
     fontSize: "1.5rem",
-    cursor: "pointer",
   },
 };
